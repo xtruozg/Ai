@@ -67,13 +67,18 @@
             border-radius: 50px;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(238, 90, 36, 0.5);
-            transition: all 0.3s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             z-index: 10;
+            user-select: none;
         }
 
         .btn-gift:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             box-shadow: 0 15px 40px rgba(238, 90, 36, 0.7);
+        }
+
+        .btn-gift:active {
+            transform: scale(0.95);
         }
 
         .btn-gift::before {
@@ -190,6 +195,11 @@
             transform: scale(1.1);
             box-shadow: 0 10px 30px rgba(72, 219, 251, 0.5);
         }
+
+        /* Hiệu ứng nút bay */
+        .btn-flying {
+            transition: left 0.25s ease-out, top 0.25s ease-out !important;
+        }
     </style>
 </head>
 <body>
@@ -240,8 +250,65 @@
             setTimeout(() => sparkle.remove(), 1000);
         }
 
-        // Di chuyển nút khi hover
-        btn.addEventListener('mouseenter', function(e) {
+        // Di chuyển nút sang vị trí ngẫu nhiên
+        function moveButton() {
+            const maxX = window.innerWidth - btn.offsetWidth - 50;
+            const maxY = window.innerHeight - btn.offsetHeight - 50;
+            
+            let newX, newY;
+            let currentX = parseFloat(btn.style.left) || 0;
+            let currentY = parseFloat(btn.style.top) || 0;
+            
+            // Đảm bảo nút bay đủ xa
+            do {
+                newX = Math.random() * maxX + 25;
+                newY = Math.random() * maxY + 25;
+            } while (
+                Math.abs(newX - currentX) < 150 &&
+                Math.abs(newY - currentY) < 150
+            );
+
+            btn.classList.add('btn-flying');
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+        }
+
+        // Xử lý khi CLICK vào nút
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            attempts++;
+            counter.textContent = attempts;
+
+            // Tạo sparkle tại vị trí click
+            for(let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createSparkle(
+                        e.clientX + (Math.random() - 0.5) * 100,
+                        e.clientY + (Math.random() - 0.5) * 100
+                    );
+                }, i * 50);
+            }
+
+            if (attempts >= 3) {
+                // Hiện troll message sau lần thứ 3
+                setTimeout(() => {
+                    trollMessage.style.display = 'flex';
+                    createConfetti();
+                }, 100);
+                return;
+            }
+
+            // Di chuyển nút ngay lập tức
+            moveButton();
+        });
+
+        // Xử lý touch cho mobile
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+            
+            const touch = e.changedTouches[0];
+            
             attempts++;
             counter.textContent = attempts;
 
@@ -249,37 +316,21 @@
             for(let i = 0; i < 5; i++) {
                 setTimeout(() => {
                     createSparkle(
-                        e.clientX + (Math.random() - 0.5) * 100,
-                        e.clientY + (Math.random() - 0.5) * 100
+                        touch.clientX + (Math.random() - 0.5) * 100,
+                        touch.clientY + (Math.random() - 0.5) * 100
                     );
-                }, i * 100);
+                }, i * 50);
             }
 
             if (attempts >= 3) {
-                // Hiện troll message
                 setTimeout(() => {
                     trollMessage.style.display = 'flex';
                     createConfetti();
-                }, 300);
+                }, 100);
                 return;
             }
 
-            // Di chuyển nút sang vị trí ngẫu nhiên
-            const maxX = window.innerWidth - btn.offsetWidth - 50;
-            const maxY = window.innerHeight - btn.offsetHeight - 50;
-            
-            let newX, newY;
-            do {
-                newX = Math.random() * maxX + 25;
-                newY = Math.random() * maxY + 25;
-            } while (
-                Math.abs(newX - parseFloat(btn.style.left)) < 200 &&
-                Math.abs(newY - parseFloat(btn.style.top)) < 200
-            );
-
-            btn.style.transition = 'all 0.2s ease';
-            btn.style.left = newX + 'px';
-            btn.style.top = newY + 'px';
+            moveButton();
         });
 
         // Tạo confetti
@@ -302,15 +353,6 @@
                 }, i * 30);
             }
         }
-
-        // Xử lý touch cho mobile
-        btn.addEventListener('touchstart', function(e) {
-            e.preventDefault();
-            btn.dispatchEvent(new MouseEvent('mouseenter', {
-                clientX: e.touches[0].clientX,
-                clientY: e.touches[0].clientY
-            }));
-        });
     </script>
 </body>
 </html>
