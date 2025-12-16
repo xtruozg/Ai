@@ -3,38 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy 2nd Anniversary 💕</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
-    <style>*{margin:0;padding:0;box-sizing:border-box}body{min-height:100vh;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);font-family:'Quicksand',sans-serif;overflow-x:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}.stars{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;overflow:hidden;z-index:0}.star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;animation:twinkle 2s infinite}@keyframes twinkle{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}.container{text-align:center;z-index:10;padding:20px;max-width:600px}.hearts-container{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5}.floating-heart{position:absolute;font-size:20px;animation:floatUp 4s ease-in forwards;opacity:0}@keyframes floatUp{0%{transform:translateY(100vh) rotate(0deg);opacity:1}100%{transform:translateY(-100px) rotate(720deg);opacity:0}}.title{font-family:'Dancing Script',cursive;font-size:3.5rem;color:#ff6b9d;text-shadow:0 0 30px rgba(255,107,157,.5);margin-bottom:10px;animation:glow 2s ease-in-out infinite alternate}@keyframes glow{from{text-shadow:0 0 30px rgba(255,107,157,.5)}to{text-shadow:0 0 50px rgba(255,107,157,.8),0 0 80px rgba(255,107,157,.4)}}.subtitle{font-size:1.3rem;color:#ffd9e8;margin-bottom:30px;letter-spacing:2px}.ring-container{margin:30px 0;position:relative;display:inline-block}.rings{font-size:4rem;animation:pulse 1.5s ease-in-out infinite}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}.love-btn{background:linear-gradient(45deg,#ff6b9d,#c44569,#ff6b9d);background-size:200% 200%;border:none;padding:18px 50px;font-size:1.2rem;font-family:'Quicksand',sans-serif;font-weight:600;color:white;border-radius:50px;cursor:pointer;transition:all .3s ease;box-shadow:0 10px 40px rgba(255,107,157,.4);animation:gradientMove 3s ease infinite;position:relative;overflow:hidden}@keyframes gradientMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}.love-btn:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 15px 50px rgba(255,107,157,.6)}.love-btn:active{transform:scale(.95)}.message-container{margin-top:40px;opacity:0;transform:translateY(30px);transition:all 1s ease;display:none}.message-container.show{display:block;opacity:1;transform:translateY(0)}.message-box{background:rgba(255,255,255,.1);backdrop-filter:blur(10px);border-radius:20px;padding:30px;border:1px solid rgba(255,107,157,.3);box-shadow:0 20px 60px rgba(0,0,0,.3)}.message-title{font-family:'Dancing Script',cursive;font-size:2rem;color:#ffb8d0;margin-bottom:20px}.message-text{color:#fff;font-size:1.1rem;line-height:2;text-align:left}.message-text p{margin-bottom:15px;opacity:0;transform:translateX(-20px);animation:slideIn .8s ease forwards}.message-text p:nth-child(1){animation-delay:.3s}.message-text p:nth-child(2){animation-delay:.6s}.message-text p:nth-child(3){animation-delay:.9s}.message-text p:nth-child(4){animation-delay:1.2s}.message-text p:nth-child(5){animation-delay:1.5s}@keyframes slideIn{to{opacity:1;transform:translateX(0)}}.signature{font-family:'Dancing Script',cursive;font-size:1.8rem;color:#ff6b9d;margin-top:25px;text-align:right}.confetti{position:fixed;width:10px;height:10px;top:-10px;animation:confettiFall 3s linear forwards;z-index:100}@keyframes confettiFall{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}.year-badge{display:inline-block;background:linear-gradient(45deg,#ffd700,#ffaa00);color:#1a1a2e;padding:8px 25px;border-radius:30px;font-weight:600;margin:15px 0;font-size:1.1rem;box-shadow:0 5px 20px rgba(255,215,0,.4)}.photo-frame{width:150px;height:150px;border-radius:50%;border:4px solid #ff6b9d;margin:20px auto;display:flex;align-items:center;justify-content:center;background:linear-gradient(45deg,#ff6b9d20,#c4456920);font-size:4rem;box-shadow:0 0 30px rgba(255,107,157,.3)}.date-counter{color:#ffd9e8;font-size:.95rem;margin-top:20px;padding:15px;background:rgba(255,255,255,.05);border-radius:15px}.highlight{color:#ff6b9d;font-weight:600}@media(max-width:480px){.title{font-size:2.5rem}.subtitle{font-size:1rem}.message-box{padding:20px}.love-btn{padding:15px 40px;font-size:1rem}}</style>
+    <title>🎁 Nhận Quà Miễn Phí!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .gift-box {
+            font-size: 120px;
+            animation: bounce 1s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin: 30px 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 2px 2px 10px rgba(0,0,0,0.3); }
+            50% { text-shadow: 0 0 30px #fff, 0 0 60px #ff6b6b; }
+        }
+
+        .subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .btn-gift {
+            position: absolute;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(238, 90, 36, 0.5);
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .btn-gift:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(238, 90, 36, 0.7);
+        }
+
+        .btn-gift::before {
+            content: "🎁 ";
+        }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 15px;
+            height: 15px;
+            top: -20px;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+
+        /* Troll message */
+        .troll-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .troll-emoji {
+            font-size: 150px;
+            animation: shake 0.5s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        .troll-text {
+            font-size: 4rem;
+            color: #ff6b6b;
+            margin-top: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 10px;
+            animation: colorChange 0.5s ease infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff6b6b; }
+            33% { color: #feca57; }
+            66% { color: #48dbfb; }
+            100% { color: #ff6b6b; }
+        }
+
+        .troll-sub {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .attempt-counter {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 20px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 30px;
+            animation: sparkle 1s ease forwards;
+        }
+
+        @keyframes sparkle {
+            0% { transform: scale(0) rotate(0deg); opacity: 1; }
+            100% { transform: scale(1.5) rotate(180deg); opacity: 0; }
+        }
+
+        .btn-retry {
+            margin-top: 40px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            background: linear-gradient(45deg, #48dbfb, #0abde3);
+            border: none;
+            border-radius: 30px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-retry:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(72, 219, 251, 0.5);
+        }
+    </style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
-    <div class="hearts-container" id="hearts"></div>
-    <div class="container">
-        <div class="photo-frame">👫</div>
-        <h1 class="title">Happy Anniversary</h1>
-        <p class="subtitle">✨ Kỷ niệm ngày cưới của chúng mình ✨</p>
-        <div class="year-badge">💍 2 Năm Hạnh Phúc 💍</div>
-        <div class="ring-container"><div class="rings">💕</div></div>
-        <button class="love-btn" onclick="showMessage()">💝 Nhấn để xem lời yêu thương 💝</button>
-        <div class="message-container" id="messageContainer">
-            <div class="message-box">
-                <h2 class="message-title">💌 Gửi Bạn Yêu Quý 💌</h2>
-                <div class="message-text">
-                    <p>🌹 Bạn ơi, 2 năm rồi kể từ ngày chúng mình chính thức thuộc về nhau. Thời gian trôi qua thật nhanh nhưng tình yêu của mình dành cho bạn thì mỗi ngày một lớn hơn.</p>
-                    <p>💑 Cảm ơn bạn đã luôn ở bên mình, cùng mình chia sẻ mọi niềm vui, nỗi buồn. Cảm ơn bạn vì những lúc mình mệt mỏi, bạn là bờ vai vững chắc cho mình dựa vào.</p>
-                    <p>🏠 2 năm qua, chúng mình đã cùng nhau xây dựng tổ ấm nhỏ, cùng nhau vượt qua bao khó khăn. Và mình biết, còn rất nhiều năm tháng phía trước đang chờ đợi chúng mình.</p>
-                    <p>⭐ Mình mong rằng, dù cuộc sống có thế nào, chúng mình vẫn mãi bên nhau như thế này. Yêu bạn từng phút, từng giây!</p>
-                    <p>🎂 <span class="highlight">HAPPY 2ND ANNIVERSARY!</span> Mình yêu bạn nhiều lắm! 💕</p>
-                </div>
-                <div class="signature">Người yêu bạn mãi 💋</div>
-            </div>
-            <div class="date-counter">
-                <p>📅 Chúng mình đã bên nhau <span class="highlight" id="daysTogether">730</span> ngày</p>
-                <p>Và sẽ còn mãi mãi về sau... 💞</p>
-            </div>
-        </div>
+    <div class="attempt-counter">
+        Số lần thử: <span id="counter">0</span>/3
     </div>
-    <script>function createStars(){const e=document.getElementById("stars");for(let t=0;t<100;t++){const t=document.createElement("div");t.className="star",t.style.left=100*Math.random()+"%",t.style.top=100*Math.random()+"%",t.style.animationDelay=2*Math.random()+"s",t.style.width=3*Math.random()+1+"px",t.style.height=t.style.width,e.appendChild(t)}}function createFloatingHearts(){const e=document.getElementById("hearts"),t=["💕","💖","💗","💓","💝","❤️","💘"];setInterval(()=>{const n=document.createElement("div");n.className="floating-heart",n.textContent=t[Math.floor(Math.random()*t.length)],n.style.left=100*Math.random()+"%",n.style.fontSize=20*Math.random()+15+"px",n.style.animationDuration=2*Math.random()+3+"s",e.appendChild(n),setTimeout(()=>n.remove(),5e3)},500)}function createConfetti(){const e=["#ff6b9d","#ffd700","#ff69b4","#ff1493","#ffb6c1","#ffc0cb"];for(let t=0;t<100;t++)setTimeout(()=>{const t=document.createElement("div");t.className="confetti",t.style.left=100*Math.random()+"%",t.style.backgroundColor=e[Math.floor(Math.random()*e.length)],t.style.borderRadius=Math.random()>.5?"50%":"0",t.style.width=10*Math.random()+5+"px",t.style.height=t.style.width,t.style.animationDuration=2*Math.random()+2+"s",document.body.appendChild(t),setTimeout(()=>t.remove(),4e3)},30*t)}function showMessage(){const e=document.getElementById("messageContainer");e.classList.add("show"),createConfetti(),setTimeout(()=>{e.scrollIntoView({behavior:"smooth",block:"center"})},300)}function calculateDays(){const e=new Date("2022-12-02"),t=Math.ceil(Math.abs(new Date-e)/864e5);document.getElementById("daysTogether").textContent=t}createStars(),createFloatingHearts(),calculateDays();</script>
+
+    <div class="container">
+        <div class="gift-box">🎁</div>
+        <h1>Chúc Mừng! Bạn Có Quà!</h1>
+        <p class="subtitle">Nhấn vào nút bên dưới để nhận quà đặc biệt của bạn</p>
+    </div>
+
+    <button class="btn-gift" id="giftBtn">NHẬN QUÀ NGAY</button>
+
+    <div class="troll-message" id="trollMessage">
+        <div class="troll-emoji">🤡</div>
+        <div class="troll-text">Đồ Ngốc!</div>
+        <p class="troll-sub">Tưởng có quà thật à? 😂😂😂</p>
+        <button class="btn-retry" onclick="location.reload()">Thử Lại 🔄</button>
+    </div>
+
+    <script>
+        const btn = document.getElementById('giftBtn');
+        const trollMessage = document.getElementById('trollMessage');
+        const counter = document.getElementById('counter');
+        let attempts = 0;
+
+        // Vị trí ban đầu của nút
+        function centerButton() {
+            const btnWidth = btn.offsetWidth;
+            const btnHeight = btn.offsetHeight;
+            btn.style.left = (window.innerWidth / 2 - btnWidth / 2) + 'px';
+            btn.style.top = (window.innerHeight / 2 + 100) + 'px';
+        }
+
+        centerButton();
+        window.addEventListener('resize', centerButton);
+
+        // Tạo sparkle effect
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.innerHTML = ['✨', '⭐', '💫', '🌟'][Math.floor(Math.random() * 4)];
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            document.body.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 1000);
+        }
+
+        // Di chuyển nút khi hover
+        btn.addEventListener('mouseenter', function(e) {
+            attempts++;
+            counter.textContent = attempts;
+
+            // Tạo sparkle
+            for(let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    createSparkle(
+                        e.clientX + (Math.random() - 0.5) * 100,
+                        e.clientY + (Math.random() - 0.5) * 100
+                    );
+                }, i * 100);
+            }
+
+            if (attempts >= 3) {
+                // Hiện troll message
+                setTimeout(() => {
+                    trollMessage.style.display = 'flex';
+                    createConfetti();
+                }, 300);
+                return;
+            }
+
+            // Di chuyển nút sang vị trí ngẫu nhiên
+            const maxX = window.innerWidth - btn.offsetWidth - 50;
+            const maxY = window.innerHeight - btn.offsetHeight - 50;
+            
+            let newX, newY;
+            do {
+                newX = Math.random() * maxX + 25;
+                newY = Math.random() * maxY + 25;
+            } while (
+                Math.abs(newX - parseFloat(btn.style.left)) < 200 &&
+                Math.abs(newY - parseFloat(btn.style.top)) < 200
+            );
+
+            btn.style.transition = 'all 0.2s ease';
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+        });
+
+        // Tạo confetti
+        function createConfetti() {
+            const colors = ['#ff6b6b', '#feca57', '#48dbfb', '#ff9ff3', '#54a0ff', '#5f27cd'];
+            const shapes = ['■', '●', '▲', '★'];
+            
+            for(let i = 0; i < 100; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confetti.style.fontSize = (Math.random() * 15 + 10) + 'px';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 4000);
+                }, i * 30);
+            }
+        }
+
+        // Xử lý touch cho mobile
+        btn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            btn.dispatchEvent(new MouseEvent('mouseenter', {
+                clientX: e.touches[0].clientX,
+                clientY: e.touches[0].clientY
+            }));
+        });
+    </script>
 </body>
 </html>
